@@ -1,0 +1,148 @@
+*,
+::before,
+::after {
+  margin: 0;
+}
+
+body {
+  background-color: rgb(40, 44, 52);
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .2rem;
+  margin: .2rem;
+}
+
+.title {
+  font-size: clamp(2rem, 3vw + 1rem, 4rem);
+  margin-block: 2rem;
+  text-decoration: underline;
+}
+
+.element {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.element div {
+  width: 150px;
+  height: 150px;
+  padding: 1.2rem;
+  border-radius: 100%;
+  font-size: .9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(.8);
+}
+
+.btn {
+  border-radius: 50%;
+  padding: 1rem;
+  margin-top: .8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(40, 44, 52);
+  border: 1.5px solid rgb(40, 44, 52);
+}
+
+.activeBtn {
+  background-color: rgb(249, 185, 183);
+  border-color: rgb(249, 185, 183);
+}
+
+.inactiveBtn {
+  background-color: transparent;
+}
+
+.btn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(249, 185, 183,0.4);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(249, 185, 183,0.4);
+  box-shadow: 0px 0px 5px 3px rgba(249, 185, 183,0.4);
+  border-color: rgb(249, 185, 183);
+}
+
+.btn:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.whiskers {
+  /* background-color: rgb(40, 44, 52); */
+  border: 1px solid rgb(40, 44, 52);
+  /* width: 1px; */
+  height: 38px;
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+}
+
+.right-whisker-1 {
+  transform:rotate(65deg);
+  top: 65%;
+  left: 75%;
+}
+
+.right-whisker-2 {
+  transform:rotate(70deg);
+  top: 72%;
+  left: 75%;
+}
+
+.left-whisker-1 {
+  transform:rotate(-65deg);
+  top: 65%;
+  right: 75%;
+}
+
+.left-whisker-2 {
+  transform:rotate(-70deg);
+  top: 72%;
+  right: 75%;
+}
+
+/* .counter-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.counter-field p {
+  font-size: 1.1rem;
+  position: relative;
+  top: 50%;
+} */
+
+
+@media (min-width: 500px) {
+  .element div {
+    font-size: 1rem;
+    width: 200px;
+    height: 200px;
+    transform: scale(.9);
+  }
+
+  .btn {
+    position: relative;
+    top: 20px;
+    left: 0;
+  }
+
+  .is-active {
+    color: rgb(249, 185, 183);
+  }
+  /* .counter-field p {
+    top: 30%;
+  } */
+}
